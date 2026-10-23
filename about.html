@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - FPOLY STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- NAVBAR HEADER -->
+    <header class="navbar" id="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="logo.ico" alt="Logo FPOLY" class="logo-img">
+                <div class="logo-text">
+                    <span>FPOLY</span>
+                    <small>STUDIO</small>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="about.html" class="nav-link active">Giới Thiệu</a></li>
+                    <li><a href="index.html#products" class="nav-link">Cấu Hình & Giá</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Thư Viện Ảnh</a></li>
+                    <li><a href="contact.html" class="nav-link">Liên Hệ & Đặt Chỗ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-outline-nav"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 7px 15px; font-size: 0.85rem;"><i class="fa-solid fa-user-plus"></i> Đăng Ký</a>
+
+                <button class="theme-toggle" id="theme-toggle" title="Đổi giao diện">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Về FPOLY Studio</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li>/</li>
+                <li style="color:var(--primary-color);">Giới Thiệu</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="products-section">
+        <div class="container">
+            <div class="grid-3" style="margin-top:2rem;">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Cấu Hình Đỉnh Cao</h3>
+                    <p>Toàn bộ hệ thống được trang bị card đồ họa RTX Series mới nhất cùng màn hình tần số quét 240Hz/360Hz mượt mà.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Dịch Vụ Tận Tâm</h3>
+                    <p>Đội ngũ nhân viên sẵn sàng hỗ trợ kỹ thuật, order đồ ăn thức uống phục vụ tận chỗ ngồi 24/7.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Sạch Sẽ & Văn Minh</h3>
+                    <p>Môi trường phòng máy máy lạnh 100% không khói thuốc, trang thiết bị được khử khuẩn liên tục mỗi ca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 FPOLY STUDIO. All Rights Reserved.</p>
+            <div class="student-credit-box">
+                Đồ án học tập thuộc <strong>Trường Cao đẳng FPT Polytechnic</strong> | Sinh viên thực hiện: <strong>Trần Hoàng Nam (PS48917)</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

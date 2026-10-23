@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ & Đặt Chỗ - FPOLY STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- NAVBAR HEADER -->
+    <header class="navbar" id="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="logo.ico" alt="Logo FPOLY" class="logo-img">
+                <div class="logo-text">
+                    <span>FPOLY</span>
+                    <small>STUDIO</small>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+                    <li><a href="index.html#products" class="nav-link">Cấu Hình & Giá</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Thư Viện Ảnh</a></li>
+                    <li><a href="contact.html" class="nav-link active">Liên Hệ & Đặt Chỗ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-outline-nav"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 7px 15px; font-size: 0.85rem;"><i class="fa-solid fa-user-plus"></i> Đăng Ký</a>
+
+                <button class="theme-toggle" id="theme-toggle" title="Đổi giao diện">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Liên Hệ & Đặt Máy Trước</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li>/</li>
+                <li style="color:var(--primary-color);">Liên Hệ</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- BOOKING & CONTACT FORM -->
+    <section class="products-section">
+        <div class="container">
+            <div class="auth-card wide" style="margin: 0 auto;">
+                <div class="auth-header">
+                    <h2>Đặt Chỗ Trước Tại FPOLY Studio</h2>
+                    <p>Giữ chỗ máy cấu hình cao cho team hoặc cá nhân dễ dàng</p>
+                </div>
+
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Họ và Tên *</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="Nhập họ tên">
+                            <span class="error-msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Địa chỉ Email *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Email nhận xác nhận">
+                            <span class="error-msg"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Số Điện Thoại *</label>
+                            <input type="text" id="phone" class="form-control" placeholder="Số điện thoại liên hệ">
+                            <span class="error-msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="zoneSelect">Chọn Khu Vực Máy *</label>
+                            <select id="zoneSelect" class="form-control">
+                                <option value="">-- Chọn khu vực --</option>
+                                <option value="standard">Zone Standard (12k/h)</option>
+                                <option value="vip">Zone VIP Cyber (18k/h)</option>
+                                <option value="pro">Zone Pro Streamer (25k/h)</option>
+                                <option value="room5v5">Phòng Thi Đấu 5v5 (45k/h)</option>
+                            </select>
+                            <span class="error-msg"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem;"><i class="fa-solid fa-calendar-check"></i> Xác Nhận Đặt Chỗ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 FPOLY STUDIO. All Rights Reserved.</p>
+            <div class="student-credit-box">
+                Đồ án học tập thuộc <strong>Trường Cao đẳng FPT Polytechnic</strong> | Sinh viên thực hiện: <strong>Trần Hoàng Nam (PS48917)</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

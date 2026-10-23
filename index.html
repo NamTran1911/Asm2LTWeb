@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPOLY STUDIO</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- NAVBAR HEADER -->
+    <header class="navbar" id="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="logo.ico" alt="Logo FPOLY" class="logo-img">
+                <div class="logo-text">
+                    <span>FPOLY</span>
+                    <small>STUDIO</small>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
+                    <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+                    <li><a href="#products" class="nav-link">Cấu Hình & Giá</a></li>
+                    <li><a href="#gallery" class="nav-link">Thư Viện Ảnh</a></li>
+                    <li><a href="contact.html" class="nav-link">Liên Hệ & Đặt Chỗ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-outline-nav"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</a>
+                <a href="register.html" class="btn btn-primary" style="padding: 7px 15px; font-size: 0.85rem;"><i class="fa-solid fa-user-plus"></i> Đăng Ký</a>
+
+                <button class="theme-toggle" id="theme-toggle" title="Đổi giao diện">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDESHOW -->
+    <section class="hero-slider-section">
+        <div class="slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <span class="sub-title">CẤU HÌNH THẾ HỆ MỚI</span>
+                            <h1>Trải Nghiệm Gaming RTX 4070 Super & 240Hz</h1>
+                            <p>Đắm chìm trong không gian Esports hiện đại chuẩn quốc tế với hệ thống máy trang bị CPU Intel Gen 14th mạnh mẽ nhất.</p>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> Đặt Máy Ngay</a>
+                                <a href="#products" class="btn btn-outline-nav">Xem Bảng Giá</a>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <img src="images/gaming%20room%203.webp" alt="Cyber Game Studio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="container">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <span class="sub-title">DỊCH VỤ PREMIUM</span>
+                            <h1>Không Gian VIP & Menu F&B Đa Dạng</h1>
+                            <p>Ghế chơi game Ergonomic chống mỏi, điều hòa 24/7 cùng menu đồ ăn thức uống phục vụ tại bàn chuyên nghiệp.</p>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Khám Phá Menu</a>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <img src="images/gaming%20room%202.webp" alt="Gaming Setup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-arrow prev-arrow" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next-arrow" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dots-container" id="dotsContainer"></div>
+            <div class="timer-bar" id="timerBar"></div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="grid-4">
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fa-solid fa-desktop"></i></div>
+                    <div class="counter" data-target="150">0</div>
+                    <p>Máy Trạm Cấu Hình High-End</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fa-solid fa-users"></i></div>
+                    <div class="counter" data-target="8500">0</div>
+                    <p>Thành Viên Thân Thiết</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="counter" data-target="24">0</div>
+                    <p>Giải Đấu Esports Đã Tổ Chức</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fa-solid fa-clock"></i></div>
+                    <div class="counter" data-target="24">0</div>
+                    <p>Giờ Phục Vụ / 7 Ngày</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HARDWARE & PRICE TABLE -->
+    <section class="products-section bg-alt" id="products">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">BẢNG GIẢ & CẤU HÌNH</span>
+                <h2>Danh Sách Khu Vực Máy tại FPOLY Studio</h2>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="tableSearchInput" placeholder="Tìm kiếm khu vực, CPU, VGA hoặc giá...">
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table" id="hardwareTable">
+                    <thead>
+                        <tr>
+                            <th>Khu Vực</th>
+                            <th>CPU</th>
+                            <th>VGA / RAM</th>
+                            <th>Màn Hình</th>
+                            <th>Đơn Giá / Giờ</th>
+                            <th>Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Zone Standard</strong></td>
+                            <td>Core i5-12400F</td>
+                            <td>RTX 3060 12GB / 16GB RAM</td>
+                            <td>180Hz IPS 24 inch</td>
+                            <td><strong style="color:var(--primary-color);">12.000đ</strong></td>
+                            <td><span style="color:#10b981;">Còn chỗ</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zone VIP Cyber</strong></td>
+                            <td>Core i7-14700KF</td>
+                            <td>RTX 4070 Super / 16GB RAM</td>
+                            <td>240Hz Fast-IPS 27 inch</td>
+                            <td><strong style="color:var(--primary-color);">18.000đ</strong></td>
+                            <td><span style="color:#10b981;">Còn chỗ</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zone Pro Streamer</strong></td>
+                            <td>Core i9-14900K</td>
+                            <td>RTX 4080 Super / 32GB RAM</td>
+                            <td>360Hz OLED 27 inch</td>
+                            <td><strong style="color:var(--primary-color);">25.000đ</strong></td>
+                            <td><span style="color:#f59e0b;">Đã đặt 80%</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phòng Thi Đấu 5v5</strong></td>
+                            <td>Core i9-14900KS</td>
+                            <td>RTX 4090 / 64GB DDR5</td>
+                            <td>360Hz ZOWIE XL2566K</td>
+                            <td><strong style="color:var(--primary-color);">45.000đ</strong></td>
+                            <td><span style="color:#ef4444;">Cần đặt trước</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY LIGHTBOX -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">THƯ VIỆN HÌNH ẢNH</span>
+                <h2>Không Gian Kiến Trúc Tại FPOLY Studio</h2>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="zone">Khu Vực Máy</button>
+                <button class="filter-btn" data-filter="event">Giải Đấu</button>
+                <button class="filter-btn" data-filter="fnb">Đồ Ăn & Thức Uống</button>
+            </div>
+
+            <div class="grid-3">
+                <div class="gallery-item" data-category="zone">
+                    <img src="images/gaming%20room%203.webp" alt="Zone VIP" class="lightbox-trigger" data-src="images/gaming%20room%203.webp" data-caption="Khu vực Zone VIP dàn máy RTX 4070 Super">
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="images/gaming%20room%202.webp" alt="Giải Đấu Esports" class="lightbox-trigger" data-src="images/gaming%20room%202.webp" data-caption="Không khí giải đấu Liên Minh Huyền Thoại tại Studio">
+                </div>
+                <div class="gallery-item" data-category="fnb">
+                    <img src="images/gaming%20room.webp" alt="Không gian gaming" class="lightbox-trigger" data-src="images/gaming%20room.webp" data-caption="Không gian gaming">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">CÂU HỎI THƯỜNG GẶP</span>
+                <h2>Giải Đáp Thắc Mắc Cho Hội Viên</h2>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <button class="accordion-header">
+                        <span>Làm thế nào để đăng ký tài khoản và nạp tiền?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Bạn chỉ cần bấm vào nút Đăng Ký trên thanh Navbar, điền đầy đủ thông tin. Dữ liệu tài khoản được lưu trữ an toàn. Bạn có thể nạp tiền trực tiếp tại quầy thu ngân hoặc qua MoMo/VNPay.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Tài khoản Admin mặc định để kiểm tra hệ thống là gì?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Tài khoản Admin có sẵn trong hệ thống JSON local bao gồm: Username: <strong>ps48917</strong> | Mật khẩu: <strong>19112007</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAT WIDGET & FOOTER -->
+    <div class="chat-widget">
+        <button class="chat-toggle-btn" id="chatToggle"><i class="fa-solid fa-comments"></i></button>
+        <div class="chat-window hidden" id="chatWindow">
+            <div class="chat-header">
+                <span>Hỗ Trợ FPOLY Studio</span>
+                <i class="fa-solid fa-xmark" id="chatClose" style="cursor:pointer;"></i>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-msg bot"><p>Xin chào! Bạn cần tư vấn thêm về cấu hình máy hay đặt chỗ trước?</p></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Nhập câu hỏi...">
+                <button class="btn btn-primary" id="chatSendBtn" style="padding: 6px 12px;"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 FPOLY STUDIO. All Rights Reserved.</p>
+            <div class="student-credit-box">
+                Đồ án học tập thuộc <strong>Trường Cao đẳng FPT Polytechnic</strong> | Sinh viên thực hiện: <strong>Trần Hoàng Nam (PS48917)</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImg" alt="Enlarged view">
+            <p id="lightboxCaption" style="color:#fff; margin-top:10px;"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
